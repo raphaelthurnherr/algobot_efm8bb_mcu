@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII"?>
+<device:XMLDevice xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:device="http://www.silabs.com/ss/hwconfig/document/device.ecore" name="EFM8BB10F8G-A-SOIC16" partId="mcu.8051.efm8.bb1.efm8bb10f8g-a-soic16" version="4.0.1" contextId="%DEFAULT%">
+  <mode name="DefaultMode">
+    <property object="ADC_0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="ADC_0" propertyId="adc.configuration.gaincontrol" value="1x gain"/>
+    <property object="ADC_0" propertyId="adc.configuration.sarclockdivider" value="24"/>
+    <property object="ADC_0" propertyId="adc.control.enableadc" value="Enabled"/>
+    <property object="ADC_0" propertyId="adc.multiplexerselection.positiveinputselection" value="ADC0.2 (P0.2)"/>
+    <property object="ADC_0" propertyId="adc.view.view" value="Advanced"/>
+    <property object="CLOCK_0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="CLOCK_0" propertyId="clock.clockselect.clocksourcedivider" value="SYSCLK / 1"/>
+    <property object="CLOCK_0" propertyId="clock.clockselect.lfosc" value="10.000 kHz"/>
+    <property object="CLOCK_0" propertyId="clock.clockselect.sysclk" value="24.500 MHz"/>
+    <property object="CROSSBAR0" propertyId="xbar0.smbus0.clockdata" value="Enabled"/>
+    <property object="CROSSBAR0" propertyId="xbar0.timer0.timer0input" value="Enabled"/>
+    <property object="CROSSBAR0" propertyId="xbar0.timer1.timer1input" value="Enabled"/>
+    <property object="CROSSBAR0" propertyId="xbar0.timer2.timer2input" value="Enabled"/>
+    <property object="DefaultMode" propertyId="mode.diagramLocation" value="50, 195"/>
+    <property object="EXTINT_0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="EXTINT_0" propertyId="extint.int0int1configuration.int0polarity" value="Active high"/>
+    <property object="EXTINT_0" propertyId="extint.int0int1configuration.int0portpinselection" value="P0.6"/>
+    <property object="EXTINT_0" propertyId="extint.int0int1configuration.int1polarity" value="Active high"/>
+    <property object="EXTINT_0" propertyId="extint.int0int1configuration.int1portpinselection" value="P0.7"/>
+    <property object="INTERRUPT_0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="INTERRUPT_0" propertyId="interrupt.extendedinterruptenable1.enableadc0conversioncompleteinterrupt" value="Enabled"/>
+    <property object="INTERRUPT_0" propertyId="interrupt.extendedinterruptenable1.enablesmbussmb0interrupt" value="Enabled"/>
+    <property object="INTERRUPT_0" propertyId="interrupt.extendedinterruptenable1.enabletimer3interrupt" value="Enabled"/>
+    <property object="INTERRUPT_0" propertyId="interrupt.extendedinterruptpriority1.smbussmb0prioritycontrolinterrupt" value="High priority"/>
+    <property object="INTERRUPT_0" propertyId="interrupt.extendedinterruptpriority1.timer3prioritycontrolinterrupt" value="High priority"/>
+    <property object="INTERRUPT_0" propertyId="interrupt.interruptenable.enableallinterrupts" value="Enabled"/>
+    <property object="INTERRUPT_0" propertyId="interrupt.interruptenable.enabletimer2interrupt" value="Enabled"/>
+    <property object="P0.2" propertyId="ports.settings.inputmode" value="Analog"/>
+    <property object="P0.2" propertyId="ports.settings.iomode" value="Analog I/O"/>
+    <property object="P0.2" propertyId="ports.settings.label" value="UBATT"/>
+    <property object="P0.2" propertyId="ports.settings.skip" value="Skipped"/>
+    <property object="P0.3" propertyId="ports.settings.label" value="DIG_IN_2"/>
+    <property object="P0.3" propertyId="ports.settings.skip" value="Skipped"/>
+    <property object="P0.4" propertyId="ports.settings.label" value="DIG_HYS_2"/>
+    <property object="P0.4" propertyId="ports.settings.skip" value="Skipped"/>
+    <property object="P0.5" propertyId="ports.settings.label" value="DIG_HYS_1"/>
+    <property object="P0.5" propertyId="ports.settings.skip" value="Skipped"/>
+    <property object="P0.6" propertyId="ports.settings.label" value="ENC_RIGHT"/>
+    <property object="P0.7" propertyId="ports.settings.label" value="ENC_LEFT"/>
+    <property object="P1.0" propertyId="ports.settings.label" value="SONAR_ECHO"/>
+    <property object="P1.1" propertyId="ports.settings.iomode" value="Digital Push-Pull Output"/>
+    <property object="P1.1" propertyId="ports.settings.label" value="SONAR_TRIG"/>
+    <property object="P1.1" propertyId="ports.settings.outputmode" value="Push-pull"/>
+    <property object="P1.2" propertyId="ports.settings.label" value="DIG_IN_1"/>
+    <property object="P1.3" propertyId="ports.settings.label" value="ADR"/>
+    <property object="PBCFG_0" propertyId="pbcfg.settings.disableportioweakpullup" value="Pull-ups disabled"/>
+    <property object="PBCFG_0" propertyId="pbcfg.settings.enablecrossbar" value="Enabled"/>
+    <property object="PCACH_0" propertyId="pcach.pcachannel.capturecompareflaginterrupt" value="Enabled"/>
+    <property object="PCACH_0" propertyId="pcach.pcachannelcapturecomparemode.enablechannelcapturenegativefunction" value="Enabled"/>
+    <property object="PCACH_0" propertyId="pcach.pcacontrol.channelcapturecomparemode" value="Capture on negative edge of CEX"/>
+    <property object="PCA_0" propertyId="pca.pcacountertimerconfiguration.pcaclockfrequency" value="2.990 kHz"/>
+    <property object="PCA_0" propertyId="pca.pcacountertimerconfiguration.pcaclockfrequencyintegervalue" value="2990"/>
+    <property object="PCA_0" propertyId="pca.pcacountertimerconfiguration.pcaclockperiod" value="334.448 uS"/>
+    <property object="PCA_0" propertyId="pca.pcacountertimerconfiguration.selectpcacountertimerpulse" value="Timer 0 overflow"/>
+    <property object="PCA_0" propertyId="pca.pcacountertimerruncontrol.pcarun" value="Start"/>
+    <property object="SMBUS_0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="SMBUS_0" propertyId="smbus.configuration.enablesmbus" value="Enabled"/>
+    <property object="SMBUS_0" propertyId="smbus.configuration.enablesmbussetupandholdtimeextension" value="Enabled"/>
+    <property object="SMBUS_0" propertyId="smbus.configuration.smbusclocksourceselection" value="Timer 2 high byte overflow"/>
+    <property object="SMBUS_0" propertyId="smbus.slaveaddress.smbushardwareslaveaddress" value="10"/>
+    <property object="SMBUS_0" propertyId="smbus.view.view" value="Advanced"/>
+    <property object="SPI_0" propertyId="spi.clockrate.sysclk" value="24.500 MHz"/>
+    <property object="SPI_0" propertyId="spi.clockrate.sysclkdividercoefficientspi0ckr" value="7"/>
+    <property object="SPI_0" propertyId="spi.control.slaveselectmode" value="Slave or master 3-wire mode"/>
+    <property object="TIMER01_0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="TIMER01_0" propertyId="timer01.timer0mode0:13bitcountertimer.timerorcounter" value="Counter mode(Count signal on T0)"/>
+    <property object="TIMER01_0" propertyId="timer01.timer0mode1:16bitcountertimer.timerorcounter" value="Counter mode(Count signal on T0)"/>
+    <property object="TIMER01_0" propertyId="timer01.timer0mode2:8bitcountertimerwithautoreload.targetoverflowfrequency" value="100000"/>
+    <property object="TIMER01_0" propertyId="timer01.timer0mode2:8bitcountertimerwithautoreload.timerinitvalue" value="11"/>
+    <property object="TIMER01_0" propertyId="timer01.timer0mode2:8bitcountertimerwithautoreload.timerreloadvalue" value="11"/>
+    <property object="TIMER01_0" propertyId="timer01.timer1mode0:13bitcountertimer.timerorcounter" value="Counter mode(Count signal on T1)"/>
+    <property object="TIMER01_0" propertyId="timer01.timer1mode1:16bitcountertimer.timerorcounter" value="Counter mode(Count signal on T0)"/>
+    <property object="TIMER16_2" propertyId="ABPeripheral.included" value="true"/>
+    <property object="TIMER16_2" propertyId="timer16.control.enablecapture" value="Enabled"/>
+    <property object="TIMER16_2" propertyId="timer16.control.mode" value="Capture mode, 16-bit"/>
+    <property object="TIMER16_2" propertyId="timer16.control.runcontrol" value="Start"/>
+    <property object="TIMER16_2" propertyId="timer16.control.timerrunningstate" value="Timer is Running"/>
+    <property object="TIMER16_2" propertyId="timer16.initandreloadvalue.targetoverflowfrequency" value="100000"/>
+    <property object="TIMER16_2" propertyId="timer16.initandreloadvalue.timerreloadvalue" value="65516"/>
+    <property object="TIMER16_2" propertyId="timer16.reloadhighbyte.reloadhighbyte" value="255"/>
+    <property object="TIMER16_2" propertyId="timer16.reloadlowbyte.reloadlowbyte" value="236"/>
+    <property object="TIMER16_3" propertyId="ABPeripheral.included" value="true"/>
+    <property object="TIMER16_3" propertyId="timer16.control.captureinput" value="Low Frequency Oscillator Falling Edge"/>
+    <property object="TIMER16_3" propertyId="timer16.control.clocksource" value="SYSCLK"/>
+    <property object="TIMER16_3" propertyId="timer16.control.runcontrol" value="Start"/>
+    <property object="TIMER16_3" propertyId="timer16.control.timerrunningstate" value="Timer is Running"/>
+    <property object="TIMER16_3" propertyId="timer16.initandreloadvalue.targetoverflowfrequency" value="20000"/>
+    <property object="TIMER16_3" propertyId="timer16.initandreloadvalue.timerreloadvalue" value="64311"/>
+    <property object="TIMER16_3" propertyId="timer16.reloadhighbyte.reloadhighbyte" value="251"/>
+    <property object="TIMER16_3" propertyId="timer16.reloadlowbyte.reloadlowbyte" value="55"/>
+    <property object="TIMER_SETUP_0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.clockcontrol.timer0clockselect" value="Use SYSCLK"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.clockcontrol.timer3lowbyteclockselect" value="Use SYSCLK"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.externalinterruptsettings.int0triggersensitivity" value="Edge-triggered"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.externalinterruptsettings.int1triggersensitivity" value="Edge-triggered"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.timer0.clocksource" value="Use SYSCLK"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.timer0.timerorcounter" value="Counter mode(Count signal on T0)"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.timer0.timerrunningstate" value="Counting rising edge on IT0"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.timer0.timerswitch1:runcontrol" value="Start"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.timer01control.timer0runcontrol" value="Start"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.timer01control.timer1runcontrol" value="Start"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.timer01mode.selectcountertimer0" value="Counter mode"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.timer1.timerorcounter" value="Counter mode"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.timer1.timerrunningstate" value="Counting rising edge on IT0"/>
+    <property object="TIMER_SETUP_0" propertyId="timer_setup.timer1.timerswitch1:runcontrol" value="Start"/>
+    <property object="VREF_0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="VREF_0" propertyId="vref.hidden.voltagereferenceselect" value="VDD pin"/>
+    <property object="VREF_0" propertyId="vref.voltagereferencecontrol.selectvoltagereference" value="Unregulated VDD"/>
+    <property object="VREF_0" propertyId="vref.voltagereferencecontrol.temperaturesensor" value="Enabled"/>
+    <property object="WDT_0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="WDT_0" propertyId="wdt.watchdogcontrol.wdtenable" value="Disable"/>
+    <property object="WDT_0" propertyId="wdt.watchdogcontrol.wdtinitialvalue" value="5"/>
+    <property object="WDT_0" propertyId="wdt.watchdogcontrol.wdtperiodactual" value="6.554 s"/>
+  </mode>
+  <modeTransition>
+    <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.source" value="RESET"/>
+    <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.target" value="DefaultMode"/>
+  </modeTransition>
+</device:XMLDevice>

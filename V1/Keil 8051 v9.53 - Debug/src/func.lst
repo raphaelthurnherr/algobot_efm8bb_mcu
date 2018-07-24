@@ -1,0 +1,106 @@
+C51 COMPILER V9.53.0.0   FUNC                                                              07/23/2018 21:48:48 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE FUNC
+OBJECT MODULE PLACED IN .\src\func.OBJ
+COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\Users\Raph\De
+                    -sktop\bck\simplicity backup\algo_sensor_processing\src\func.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) F
+                    -LOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:/Users/Raph/Desktop/bck/simplicity 
+                    -backup/algo_sensor_processing/inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.1.2//Device/shared/si8051bas
+                    -e;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.1.2//Device/EFM8BB1/inc) PRINT(.\src\func.lst) COND PAGEWIDT
+                    -H(120) PAGELENGTH(65) OBJECT(.\src\func.OBJ)
+
+line level    source
+
+   1          /*
+   2           * func.c
+   3           *
+   4           *  Created on: 13 mars 2018
+   5           *      Author: Raph
+   6           */
+   7          
+   8          #include"algo_sensor_processing.h"
+   9          
+  10          
+  11          unsigned char getRegisterValue(unsigned char regAdress){
+  12   1              unsigned char temp=0;
+  13   1              unsigned char regValue=0;
+  14   1      
+  15   1      
+  16   1              switch(regAdress){
+  17   2      
+  18   2                                                case BOARD_TYPE : regValue = 0x11; break;
+  19   2                                                case MCU_FIRMWARE : regValue = 0x0A; break;
+  20   2                                                case CTRL_REG :       regValue=0;
+  21   2                                                                                      temp = temp + ((CNT_IN_4.enable & 0x01)<<7);
+  22   2                                                                                      temp = temp + ((CNT_IN_3.enable & 0x01)<<6);
+  23   2                                                                                      temp = temp + ((BATTERY.enable & 0x01)<<5);
+  24   2                                                                                      temp = temp + ((SONAR.enable & 0x01)<<4);
+  25   2                                                                                      temp = temp + ((DIN3.enable & 0x01)<<3);
+  26   2                                                                                      temp = temp + ((DIN2.enable & 0x01)<<2);
+  27   2                                                                                      temp = temp + ((DIN1.enable & 0x01)<<1);
+  28   2                                                                                      temp = temp + (DIN0.enable & 0x01);
+  29   2                                                                                      regValue = temp;
+  30   2                                                                                      break;
+  31   2                                                case DIN_STATE :        temp=0;
+  32   2                                                                                        temp = temp +(DIN3.value & 0x01)<<3;
+  33   2                                                                                        temp = temp + ((DIN2.value & 0x01)<<2);
+  34   2                                                                                        temp = temp + ((DIN1.value & 0x01)<<1);
+  35   2                                                                                        temp = temp + ((DIN0.value & 0x01));
+  36   2                                                                                        regValue = temp;
+  37   2                                                                                        break;
+  38   2                                                case SONAR_L : regValue = SONAR.dist_inst_mm & 0x00FF;
+  39   2                                                                                break;
+  40   2                                                case SONAR_H : regValue = (SONAR.dist_inst_mm & 0xFF00)>>8;
+  41   2                                                                                break;
+  42   2                                                case SONAR_MEAN_L : regValue = SONAR.dist_mean_mm & 0x00FF;
+  43   2                                                                                        break;
+  44   2                                                case SONAR_MEAN_H : regValue = (SONAR.dist_mean_mm & 0xFF00)>>8;
+  45   2                                                                                        break;
+  46   2                                                case BATT_L : regValue = BATTERY.voltage_inst_mV & 0x00FF;
+  47   2                                                                                break;
+  48   2                                                case BATT_H : regValue = (BATTERY.voltage_inst_mV & 0xFF00)>>8;
+  49   2                                                                                break;
+  50   2                                                case BATT_MEAN_L : regValue = BATTERY.voltage_mean_mV & 0x00FF;
+  51   2                                                                                break;
+C51 COMPILER V9.53.0.0   FUNC                                                              07/23/2018 21:48:48 PAGE 2   
+
+  52   2                                                case BATT_MEAN_H : regValue = (BATTERY.voltage_mean_mV & 0xFF00)>>8;
+  53   2                                                                                        break;
+  54   2                                                case FRQ_1 : regValue = CNT_IN_3.frequency;
+  55   2                                                                        break;
+  56   2                                                case FRQ_2 : regValue = CNT_IN_4.frequency;
+  57   2                                                                        break;
+  58   2                                                case CNT_1_L : regValue = CNT_IN_3.pulses & 0x00FF;
+  59   2                                                                                break;
+  60   2                                                case CNT_1_H : regValue = (CNT_IN_3.pulses & 0xFF00)>>8;
+  61   2                                                                                break;
+  62   2                                                case CNT_2_L : regValue = CNT_IN_4.pulses & 0x00FF;
+  63   2                                                                                break;
+  64   2                                                case CNT_2_H : regValue = (CNT_IN_4.pulses & 0xFF00)>>8;
+  65   2                                                                                break;
+  66   2                                                case CNT_1_CLEAR : TH0=TL0=0; break;
+  67   2                                                case CNT_2_CLEAR : TH1=TL1=0; break;
+  68   2      
+  69   2                                                default       :       regValue = 0xDD; break;
+  70   2                                        }
+  71   1                return (regValue);
+  72   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    282    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
