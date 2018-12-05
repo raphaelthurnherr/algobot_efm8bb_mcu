@@ -20,24 +20,24 @@ RM := rm -rf
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: algo_sensor_processing.omf
+all: V1.omf
 
 # Tool invocations
-algo_sensor_processing.omf: echo_path $(OBJS)
+V1.omf: echo_path $(OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Keil 8051 Linker'
-	LX51 "@algo_sensor_processing.lnp" || $(RC)
+	LX51 "@V1.lnp" || $(RC)
 	@echo 'Finished building target: $@'
 
 # Change from all upper case to the expected case
-	@-mv "ALGO_SENSOR_PROCESSING.OMF.CRBUILD" "$@"
+	@-mv "V1.OMF.CRBUILD" "$@"
 
-# Generate hex file: algo_sensor_processing.hex
-	@Ohx51 "algo_sensor_processing.omf" "HEXFILE (algo_sensor_processing.hex)" "H386" 2>&1 >/dev/null
+# Generate hex file: V1.hex
+	@Ohx51 "V1.omf" "HEXFILE (V1.hex)" "H386" 2>&1 >/dev/null
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS) algo_sensor_processing.omf
+	-$(RM) $(EXECUTABLES)$(OBJS) V1.omf
 	-@echo ' '
 
 .PHONY: all clean dependents

@@ -1,14 +1,14 @@
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        07/24/2018 00:50:48 PAGE 1   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        12/02/2018 00:35:21 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE INITDEVICE
 OBJECT MODULE PLACED IN .\src\InitDevice.OBJ
-COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\Users\Raph\De
-                    -sktop\bck\simplicity backup\algo_sensor_processing\src\InitDevice.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVE
-                    -L(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:/Users/Raph/Desktop/bck/simpl
-                    -icity backup/algo_sensor_processing/inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.1.2//Device/shared/si8
-                    -051base;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.1.2//Device/EFM8BB1/inc) PRINT(.\src\InitDevice.lst) C
-                    -OND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src\InitDevice.OBJ)
+COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\Users\Raph\Go
+                    -ogle Drive\dev\embedded_soft\efm8bb\algobot_efm8bb_mcu\V1\src\InitDevice.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARN
+                    -INGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:/Users/Raph/Google Dri
+                    -ve/dev/embedded_soft/efm8bb/algobot_efm8bb_mcu/V1/inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.1.2//Dev
+                    -ice/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.1.2//Device/EFM8BB1/inc) PRINT(.\src\Ini
+                    -tDevice.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src\InitDevice.OBJ)
 
 line level    source
 
@@ -63,7 +63,7 @@ line level    source
   49   1              // $[P0MDIN - Port 0 Input Mode]
   50   1              /***********************************************************************
   51   1               - P0.0 pin is configured for digital mode
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        07/24/2018 00:50:48 PAGE 2   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        12/02/2018 00:35:21 PAGE 2   
 
   52   1               - P0.1 pin is configured for digital mode
   53   1               - P0.2 pin is configured for analog mode
@@ -128,7 +128,7 @@ line level    source
  112   1              // [P1MASK - Port 1 Mask]$
  113   1      
  114   1              // $[P1MAT - Port 1 Match]
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        07/24/2018 00:50:48 PAGE 3   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        12/02/2018 00:35:21 PAGE 3   
 
  115   1              // [P1MAT - Port 1 Match]$
  116   1      
@@ -193,7 +193,7 @@ line level    source
  175   1               - ADC0 operates in 10-bit or 12-bit mode 
  176   1               - The on-chip PGA gain is 1
  177   1               - Normal Track Mode
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        07/24/2018 00:50:48 PAGE 4   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        12/02/2018 00:35:21 PAGE 4   
 
  178   1               ***********************************************************************/
  179   1              ADC0CF = (0x18 << ADC0CF_ADSC__SHIFT) | ADC0CF_AD8BE__NORMAL
@@ -258,7 +258,7 @@ line level    source
  238   1      
  239   1              // [Timer Restoration]$
  240   1      
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        07/24/2018 00:50:48 PAGE 5   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        12/02/2018 00:35:21 PAGE 5   
 
  241   1      }
  242          
@@ -323,7 +323,7 @@ line level    source
  301   1              // $[PCA0CENT - PCA Center Alignment Enable]
  302   1              // [PCA0CENT - PCA Center Alignment Enable]$
  303   1      
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        07/24/2018 00:50:48 PAGE 6   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        12/02/2018 00:35:21 PAGE 6   
 
  304   1              // $[PCA0CLR - PCA Comparator Clear Control]
  305   1              // [PCA0CLR - PCA Comparator Clear Control]$
@@ -388,7 +388,7 @@ line level    source
  364   1              // Select Capture/Compare register)
  365   1              PCA0PWM &= ~PCA0PWM_ARSEL__BMASK;
  366   1              // [PCA0 Settings Save]$
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        07/24/2018 00:50:48 PAGE 7   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        12/02/2018 00:35:21 PAGE 7   
 
  367   1      
  368   1              // $[PCA0CPM1 - PCA Channel 1 Capture/Compare Mode]
@@ -453,7 +453,7 @@ line level    source
  427          extern void EXTINT_0_enter_DefaultMode_from_RESET(void) {
  428   1              // $[IT01CF - INT0/INT1 Configuration]
  429   1              /***********************************************************************
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        07/24/2018 00:50:48 PAGE 8   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        12/02/2018 00:35:21 PAGE 8   
 
  430   1               - INT0 input is active high
  431   1               - Select P0.6
@@ -518,7 +518,7 @@ line level    source
  490   1              // $[IP - Interrupt Priority]
  491   1              // [IP - Interrupt Priority]$
  492   1      
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        07/24/2018 00:50:48 PAGE 9   
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        12/02/2018 00:35:21 PAGE 9   
 
  493   1      }
  494          
@@ -583,7 +583,7 @@ line level    source
  553   1               - Start Timer 2 running
  554   1               ***********************************************************************/
  555   1              TMR2CN0 |= TMR2CN0_TR2__RUN;
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        07/24/2018 00:50:48 PAGE 10  
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        12/02/2018 00:35:21 PAGE 10  
 
  556   1              // [TMR2CN0]$
  557   1      
@@ -648,7 +648,7 @@ line level    source
  616   1               - The internal reference operates at 1.65 V nominal
  617   1               - The ADC0 voltage reference is the VDD pin
  618   1               ***********************************************************************/
-C51 COMPILER V9.53.0.0   INITDEVICE                                                        07/24/2018 00:50:48 PAGE 11  
+C51 COMPILER V9.53.0.0   INITDEVICE                                                        12/02/2018 00:35:21 PAGE 11  
 
  619   1              REF0CN = REF0CN_TEMPE__TEMP_ENABLED | REF0CN_GNDSL__GND_PIN
  620   1                              | REF0CN_IREFLVL__1P65 | REF0CN_REFSL__VDD_PIN;
